@@ -1,5 +1,5 @@
-# observability-through-prediction
-# Which Sensors Are Enough?
+# Quantifying observability through predicatibility
+# 
 
 ## Predictability and Observability in Multivariate Time Series
 
@@ -15,13 +15,13 @@ We investigate this using two coupled oscillators, incomplete measurements, and 
 
 We simulate two coupled oscillators:
 
-\[
+$$
 \ddot{x}_1+\gamma_1\dot{x}_1+\omega_1^2x_1=u(t),
-\]
+$$
 
-\[
+$$
 \ddot{x}_2+\gamma_2\dot{x}_2+\omega_2^2x_2=\kappa x_1.
-\]
+$$
 
 Here:
 
@@ -32,10 +32,10 @@ Here:
 
 Only noisy measurements of the oscillator positions are initially available:
 
-\[
+$$
 y_t^{(1)}=x_1(t)+\epsilon_t^{(1)}, \qquad
 y_t^{(2)}=x_2(t)+\epsilon_t^{(2)}.
-\]
+$$
 
 The disturbance \(u(t)\) is treated as an unmeasured variable. Later, it is added as a candidate sensor to test whether it improves prediction.
 
@@ -47,12 +47,12 @@ A single measurement may not reveal the complete state of the system. However, i
 
 For a set of measurements \(S\), we construct a history window:
 
-\[
+$$
 \mathbf h_t^{(S)}
 =
 [\mathbf y_t^{(S)},\mathbf y_{t-1}^{(S)},\ldots,
 \mathbf y_{t-m+1}^{(S)}].
-\]
+$$
 
 This history acts as a reconstructed state of the system.
 
@@ -68,15 +68,15 @@ Long history windows can be high-dimensional and contain repeated information. W
 
 The training history matrix is decomposed as
 
-\[
+$$
 H_{\mathrm{train}}=U\Sigma V^{\mathsf T}.
-\]
+$$
 
 Keeping the first \(r\) SVD modes gives a reduced state:
 
-\[
+$$
 \mathbf z_t=V_r^{\mathsf T}\mathbf h_t.
-\]
+$$
 
 The forecasting pipeline is therefore:
 
