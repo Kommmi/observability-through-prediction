@@ -1,5 +1,6 @@
 # Quantifying observability through predicatibility
 # 
+![CoreQuestion](M1.jpg)
 
 ## Predictability and Observability in Multivariate Time Series
 
