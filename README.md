@@ -48,10 +48,9 @@ A single measurement may not reveal the complete state of the system. However, i
 For a set of measurements \(S\), we construct a history window:
 
 $$
-\mathbf h_t^{(S)}
-=
-[\mathbf y_t^{(S)},\mathbf y_{t-1}^{(S)},\ldots,
-\mathbf y_{t-m+1}^{(S)}].
+\mathbf h_t^{(S)}= 
+\mathbf y_t^{(S)},\mathbf y_{t-1}^{(S)},\ldots,
+\mathbf y_{t-m+1}^{(S)}.
 $$
 
 This history acts as a reconstructed state of the system.
